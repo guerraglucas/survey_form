@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Student average profile survey</h1>
+      <p id="description">
+        A survey with the puropose to know the average student of programming
+        languages today.
+      </p>
+    </header>
+    <main>
+      <form action="submit" id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <label for="email" id="email-label">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email@mail.com"
+          required
+        />
+        <label for="number" id="number-label"
+          >Age <span>(optional)</span></label
+        >
+        <input
+          type="number"
+          id="number"
+          name="number"
+          min="0"
+          max="120"
+          placeholder="18"
+        />
+        <section id="current-role">
+          <p>What is your current role?</p>
+          <select name="dropdown" id="dropdown">
+            <option value="none">-</option>
+            <option value="student">Student</option>
+            <option value="ft-job">Full-time Job</option>
+            <option value="pt-job">Part-time Job</option>
+            <option value="intern">Intern</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+        <section id="radio-buttons">
+          <p>Would you recommend my form to a friend?</p>
+          <input type="radio" name="recom" id="y" value="y" />
+          <label for="y">Yes</label>
+          <input type="radio" name="recom" id="y" value="n" />
+          <label for="n">No</label>
+          <input type="radio" name="recom" id="ns" value="ns" />
+          <label for="ns">Not sure</label>
+        </section>
+        <section id="favorites">
+          <p>What is your favorite programming language?</p>
+          <select name="languages" id="languages">
+            <option value="none">-</option>
+            <option value="js">JavaScript</option>
+            <option value="py">Python</option>
+            <option value="jv">Java</option>
+            <option value="rb">Ruby</option>
+            <option value="ot">Other</option>
+          </select>
+        </section>
+        <section id="improvement">
+          <p>What can be improved on this form?</p>
+          <input type="checkbox" id="fields" name="fields" value="fields" />
+          <label for="fields">More fields</label>
+          <input type="checkbox" id="color" name="color" value="color" />
+          <label for="color">More colors</label>
+          <input
+            type="checkbox"
+            id="more-lang"
+            name="more-lang"
+            value="more-lang"
+          />
+          <label for="more-lang">More languages</label>
+        </section>
+        <p>Any comments or suggestions?</p>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        <button id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
